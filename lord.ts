@@ -4,7 +4,7 @@ class Lord1 {
     attack:number=10;
     defense:number=5;
     speed:number=30;
-    dead: boolean=true;
+    dead: boolean=false;
 
     basicAttack(){
     return this.attack
@@ -29,3 +29,4 @@ class Lord1 {
     }
 
 const lord = new Lord1();
+console.log (lord.isDead())

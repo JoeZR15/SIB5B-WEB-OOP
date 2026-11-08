@@ -45,8 +45,8 @@ class Mario2 {
 }
 
 class superMario2 extends Mario2 {
-    constructor (hp : number, speed : number, positionx : number, positiony : number, invincible : boolean , currentform : string) {
-        super (hp, speed, positionx, positiony, invincible, currentform)
+    constructor () {
+        super (5, 3, 0, 0, true, "super mario")
     }
 
     superStar () : string {
@@ -91,7 +91,7 @@ class fireMario2 extends Mario2 {
 }
 
 const mario1 = new Mario2 (1, 5, 0, 0, false, "mario");
-const supermario1 = new superMario2 (2, 5, 0, 0, false, "superMario");
+const supermario1 = new superMario2 ();
 const firemari1 = new fireMario2 (2, 5, 0, 0, false, "fireMario");
 
 console.log(mario1.superStar());
