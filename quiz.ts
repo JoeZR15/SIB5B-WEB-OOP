@@ -7,6 +7,11 @@ class Mario {
     invincible: boolean = false;
     currentForm: "mario"|"SuperMario"|"FireMario" = "mario";
 
+    constructor (a:number,b:number) {
+        this.hp = a
+        this.speed = b
+    }
+
     bergerakKanan() {
         this.positionX += this.speed
     return `mario bergerak ke kanan sebanyak ${this.positionX} block`
@@ -48,7 +53,7 @@ class Mario {
 
 class superMario extends Mario {
     constructor() {
-        super();
+        super(100, 1);
         this.currentForm = "SuperMario" 
     }
 
@@ -72,7 +77,7 @@ class superMario extends Mario {
 class fireMario extends Mario {
 
     constructor() {
-        super();
+        super(10, 30);
         this.currentForm = "FireMario"
     }
 
@@ -94,7 +99,7 @@ class fireMario extends Mario {
 }
 
 
-const mario = new Mario ()
+const mario = new Mario(12, 12)
 const supermario = new superMario()
 const firemario = new fireMario ()
 
